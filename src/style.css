@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
+
+* {
+    font-family: "Inter", sans-serif;
+    color: black;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    background-color: #fff7ed;
+}
+
+nav {
+    background-color: #fff7ed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+section {
+    padding: 0 25px;
+}
+
+.nav-title {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 40px;
+}
+
+.nav-link-div {
+    display: flex;
+    justify-content: space-between;
+    color: #4d4d4d;
+}
+
+.nav-link {
+    color: #4d4d4d;
+    margin-left: 10px;
+}
+
+a {
+    font-family: "Inter";
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff8c38;
+}
+
+.home {
+    background: url("./images/image-accueil.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-title {
+    color: #ffffff;
+    font-size: 36px;
+}
+
+.home-text {
+    color: #ffffff;
+}
+
+.about--image {
+    width: 100%;
+}
+
+.about--section {
+    padding: 30px 20px;
+}
+
+.about--title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.about--box {
+    background: #ffcc8d;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about--subtitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0px;
+}
+
+.about--button {
+    background-color: black;
+    width: 174px;
+    margin: 20px 0px 0px 0px;
+}
+
+.about--text {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+button {
+    background: #ff8c38;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Inter";
+    font-weight: 500;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #252525;
+    color: #aaaaaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: 30px;
+}
