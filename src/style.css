@@ -47,7 +47,7 @@ a {
 }
 
 a:hover {
-    color: #ff8c38;
+    text-decoration: underline;
 }
 
 .home {
@@ -110,6 +110,13 @@ a:hover {
 .about--text {
     margin-top: 20px;
     margin-bottom: 50px;
+}
+
+.link-button {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Inter";
+    font-weight: 500;
 }
 
 button {

@@ -1,5 +1,6 @@
 import React from "react";
 import imageabout from "./images/image-about.png";
+import { Link } from "react-router-dom";
 
 const About = () => {
     return (
@@ -29,7 +30,9 @@ const About = () => {
                         </h2>
                         <h2 className="about--subtitle">Your van is ready.</h2>
                         <button className="about--button">
-                            Explore our vans
+                            <Link className="link-button" to="/vans">
+                                Explore our vans
+                            </Link>
                         </button>
                     </div>
                 </div>
