@@ -11,11 +11,9 @@ const Home = () => {
                 Add adventure to your life by joining the #vanlife movement.
                 Rent the perfect van to make your perfect road trip.
             </p>
-            <button>
-                <Link className="link-button" to="/vans">
-                    Find your van
-                </Link>
-            </button>
+            <Link className="link-button home--button" to="/vans">
+                Find you vans
+            </Link>
         </section>
     );
 };

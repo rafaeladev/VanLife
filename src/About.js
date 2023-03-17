@@ -29,11 +29,9 @@ const About = () => {
                             Your destination is waiting.
                         </h2>
                         <h2 className="about--subtitle">Your van is ready.</h2>
-                        <button className="about--button">
-                            <Link className="link-button" to="/vans">
-                                Explore our vans
-                            </Link>
-                        </button>
+                        <Link className="link-button about--button" to="/vans">
+                            Explore our vans
+                        </Link>
                     </div>
                 </div>
             </section>
