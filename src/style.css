@@ -4,17 +4,31 @@
 * {
     font-family: "Inter", sans-serif;
     color: black;
+    box-sizing: border-box;
 }
 
 html {
-    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background-color: #fff7ed;
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
+    padding: 0;
     font-size: 16px;
     background-color: #fff7ed;
     max-width: 1200px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.site-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
 }
 
 header {
@@ -39,7 +53,10 @@ header > :nth-child(2) {
 
 section {
     padding: 0 25px;
-    margin-bottom: 50px;
+}
+
+main {
+    margin-bottom: 84px;
 }
 
 .nav-title {
@@ -164,6 +181,20 @@ a {
     font-weight: 700;
     font-size: 30px;
     margin-bottom: 50px;
+}
+
+.van-list-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.van-list-filter-buttons > a {
+    margin-right: 15px;
+}
+
+.van-list-filter-buttons button {
+    margin-right: 15px;
+    cursor: pointer;
 }
 
 .van-list {
@@ -480,4 +511,13 @@ footer {
 .host-van-detail-image {
     height: 100px;
     border-radius: 5px;
+}
+.not-found-container {
+    padding-inline: 26px;
+}
+
+.not-found-container .link-button {
+    width: 100%;
+    background-color: #161616;
+    color: white;
 }
