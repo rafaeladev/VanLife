@@ -1,9 +1,7 @@
 import {
-    HashRouter,
     RouterProvider,
     createHashRouter,
     createRoutesFromElements,
-    Routes,
     Route,
 } from "react-router-dom";
 
@@ -18,16 +16,17 @@ import HostVans from "./pages/Host/HostVans";
 import HostVanDetail from "./pages/Host/HostVanDetail";
 import HostVanInfo from "./pages/Host/HostVanInfo";
 import HostVanPricing from "./pages/Host/HostVanPricing";
-import HostVanPhotos from "./pages/Host/HostVanPhotos.jsx";
+import HostVanPhotos from "./pages/Host/HostVanPhotos";
+import NotFound from "./pages/NotFound";
 
 import Layout from "./components/Layout";
 import HostLayout from "./components/HostLayout";
-import NotFound from "./pages/NotFound.jsx";
+import Error from "./components/Error";
 
 function App() {
     const router = createHashRouter(
         createRoutesFromElements(
-            <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Layout />} errorElement={<Error />}>
                 <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="vans" element={<Vans />} loader={vansLoader} />

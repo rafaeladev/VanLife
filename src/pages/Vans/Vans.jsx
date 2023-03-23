@@ -8,30 +8,11 @@ export function loader() {
 
 export default function Vans() {
     const vans = useLoaderData();
-    //console.log(data);
 
-    //const [vans, setVans] = React.useState([]);
     const [searchParams, setSearchParams] = useSearchParams();
-    //const [loading, setLoading] = React.useState(false);
+
     const [error, setError] = React.useState(null);
     const typeFilter = searchParams.get("type");
-
-    // Fetch dans l'API avec useEffect
-    // React.useEffect(() => {
-    //     async function loadVans() {
-    //         setLoading(true);
-    //         try {
-    //             const data = await getVans();
-    //             setVans(data);
-    //         } catch (err) {
-    //             setError(err);
-    //         } finally {
-    //             setLoading(false);
-    //         }
-    //     }
-
-    //     loadVans();
-    // }, []);
 
     // Filtrer les vans par type
     const vansDisplayed = typeFilter
