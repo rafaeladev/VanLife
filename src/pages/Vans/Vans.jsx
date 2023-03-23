@@ -29,9 +29,13 @@ export default function Vans() {
     return (
         <section className="van">
             <h1>Explore our van options</h1>
-            <div className="van-list-container">
-                <div className="van-list">{vansElements}</div>
-            </div>
+            {vans === [] ? (
+                <h2>Loading...</h2>
+            ) : (
+                <div className="van-list-container">
+                    <div className="van-list">{vansElements}</div>
+                </div>
+            )}
         </section>
     );
 }
