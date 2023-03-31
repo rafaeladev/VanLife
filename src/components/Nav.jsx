@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import image from "../images/avatar-icon.png";
 
 const Nav = () => {
     const activeStyle = {
@@ -31,6 +32,9 @@ const Nav = () => {
                 >
                     Vans
                 </NavLink>
+                <Link to="login" className="login-link">
+                    <img src={image} alt="avatar icon" />
+                </Link>
             </div>
         </nav>
     );

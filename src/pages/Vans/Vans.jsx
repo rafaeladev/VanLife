@@ -11,7 +11,7 @@ export default function Vans() {
 
     const [searchParams, setSearchParams] = useSearchParams();
 
-    const [error, setError] = React.useState(null);
+    // const [error, setError] = React.useState(null);
     const typeFilter = searchParams.get("type");
 
     // Filtrer les vans par type
@@ -47,9 +47,9 @@ export default function Vans() {
     //     return <h1>Loading...</h1>;
     // }
 
-    if (error) {
-        return <h1>There was an error {error.message}</h1>;
-    }
+    // if (error) {
+    //     return <h1>There was an error {error.message}</h1>;
+    // }
 
     return (
         <section className="van">
