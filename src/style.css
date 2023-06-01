@@ -412,11 +412,13 @@ footer {
 }
 
 /* Host van detail */
-
+.host-van-detail-layout-container {
+    margin: 20px 30px;
+}
 .host-van-detail {
     background-color: #ffffff;
     padding: 20px;
-    margin: 20px 26px;
+    margin-bottom: 2em;
     border-radius: 5px;
 }
 
@@ -486,7 +488,20 @@ footer {
 }
 
 .host-van-detail-info {
-    padding-inline: 0;
+    padding-inline: 20px;
+}
+
+.host-van-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.host-van-detail > img {
+    border-radius: 5px;
+    margin: auto;
+    width: 50%;
 }
 
 .host-van-detail-info > h4 {
@@ -496,6 +511,15 @@ footer {
 }
 .host-van-detail-info > h4 > span {
     font-weight: 400;
+}
+
+.host-van-detail-info-text {
+    width: 50%;
+}
+
+.host-van-detail-nav {
+    display: flex;
+    gap: 20px;
 }
 
 .host-van-price {
@@ -564,6 +588,7 @@ footer {
     height: 55px;
     margin-top: 22px;
     color: white;
+    background-color: #000000;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
 }
@@ -583,6 +608,18 @@ footer {
     margin-left: 20px;
 }
 
+.x-button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    margin-left: 10px;
+}
+
 .red {
     color: red;
+}
+
+.buttonLogin {
+    background-color: black;
 }

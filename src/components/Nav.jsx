@@ -40,7 +40,9 @@ const Nav = () => {
                 <Link to="login" className="login-link">
                     <img src={image} alt="avatar icon" />
                 </Link>
-                <button onClick={fakeLogOut}>X</button>
+                <button className="x-button" onClick={fakeLogOut}>
+                    X
+                </button>
             </div>
         </nav>
     );
