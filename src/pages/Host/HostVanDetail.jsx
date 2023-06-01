@@ -1,79 +1,63 @@
 import React from "react";
-import {
-    useParams,
-    Link,
-    NavLink,
-    Outlet,
-    useLoaderData,
-} from "react-router-dom";
-import { getHostVans } from "../../api.js";
-import { requireAuth } from "../../utils.js";
+import { Link, NavLink, Outlet, useLoaderData } from "react-router-dom";
+import { getHostVans } from "../../api";
+import { requireAuth } from "../../utils";
 
-export async function loader({ params }) {
-    await requireAuth();
+export async function loader({ params, request }) {
+    await requireAuth(request);
     return getHostVans(params.id);
 }
 
-const VanDetail = () => {
-    const activeStyle = {
+export default function HostVanDetail() {
+    const currentVan = useLoaderData();
+    console.log(currentVan);
+
+    const activeStyles = {
         fontWeight: "bold",
         textDecoration: "underline",
         color: "#161616",
     };
-    // const { id } = useParams();
-
-    // const [currentVan, setCurrentVan] = React.useState(null);
-    const currentVan = useLoaderData();
-
-    // React.useEffect(() => {
-    //     fetch(`/api/vans/${id}`)
-    //         .then((res) => res.json())
-    //         .then((data) => setCurrentVan(data.vans));
-    // }, [id]);
 
     return (
         <section>
-            <Link to="../." relative="path" className="back-button">
+            <Link to=".." relative="path" className="back-button">
                 &larr; <span>Back to all vans</span>
             </Link>
-            <div className="host-van-detail">
-                <div className="host-van-detail-single">
-                    <img src={currentVan.imageUrl} alt="van" />
-                    <div className="host-van-detail-text">
-                        <i className={`van-type ${currentVan.type} selected`}>
+
+            <div className="host-van-detail-layout-container">
+                <div className="host-van-detail">
+                    <img src={currentVan.imageUrl} alt="van img" />
+                    <div className="host-van-detail-info-text">
+                        <i className={`van-type van-type-${currentVan.type}`}>
                             {currentVan.type}
                         </i>
-                        <h2>{currentVan.name}</h2>
-                        <p className="van-price">
-                            <span>${currentVan.price}</span>/day
-                        </p>
+                        <h3>{currentVan.name}</h3>
+                        <h4>${currentVan.price}/day</h4>
                     </div>
                 </div>
-                <nav className="host-van-detail-link">
+
+                <nav className="host-van-detail-nav">
                     <NavLink
-                        className=""
                         to="."
                         end
                         style={({ isActive }) =>
-                            isActive ? activeStyle : null
+                            isActive ? activeStyles : null
                         }
                     >
                         Details
                     </NavLink>
                     <NavLink
-                        className=""
                         to="pricing"
                         style={({ isActive }) =>
-                            isActive ? activeStyle : null
+                            isActive ? activeStyles : null
                         }
                     >
                         Pricing
                     </NavLink>
                     <NavLink
-                        className=""
                         to="photos"
                         style={({ isActive }) =>
-                            isActive ? activeStyle : null
+                            isActive ? activeStyles : null
                         }
                     >
                         Photos
@@ -83,6 +67,4 @@ const VanDetail = () => {
             </div>
         </section>
     );
-};
-
-export default VanDetail;
+}

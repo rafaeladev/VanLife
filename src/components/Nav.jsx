@@ -8,6 +8,11 @@ const Nav = () => {
         textDecoration: "underline",
         color: "#161616",
     };
+
+    function fakeLogOut() {
+        localStorage.removeItem("loggedin");
+    }
+
     return (
         <nav>
             <div className="nav-link-div">
@@ -35,6 +40,7 @@ const Nav = () => {
                 <Link to="login" className="login-link">
                     <img src={image} alt="avatar icon" />
                 </Link>
+                <button onClick={fakeLogOut}>X</button>
             </div>
         </nav>
     );

@@ -560,8 +560,6 @@ footer {
 }
 
 .login-form > button {
-    background-color: #ff8c38;
-    border: none;
     border-radius: 6px;
     height: 55px;
     margin-top: 22px;
@@ -573,6 +571,11 @@ footer {
 .login-form > button:hover {
     cursor: pointer;
     transform: translate(1px, 1px);
+}
+
+.login-form > button:disabled {
+    background-color: #aaaaaa;
+    cursor: not-allowed;
 }
 
 .login-link > img {
